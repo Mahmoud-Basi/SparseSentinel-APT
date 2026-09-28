@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software or derived resource, please cite the associated paper."
+title: "SparseSentinel-APT"
+type: software
+version: 0.1.0
+date-released: 2026-09-28
+authors:
+  - family-names: Basi
+    given-names: Mahmoud
+    orcid: "https://orcid.org/0009-0009-5731-2818"
+  - family-names: Shang
+    given-names: Tao
+    orcid: "https://orcid.org/0000-0003-2369-1521"
+  - family-names: Wang
+    given-names: Weiwei
+license: MIT
+keywords:
+  - advanced persistent threat
+  - multimodal learning
+  - joint-embedding predictive architecture
+  - selective prediction
+  - evidence retrieval
+  - threat intelligence
+

@@ -1,0 +1,21 @@
+project: SparseSentinel-APT
+release: 0.1.0-private
+seeds: [42, 52, 62, 72, 82]
+sequence_length: 32
+splits:
+  train: 3977
+  validation: 343
+  test: 381
+modalities:
+  network_features: 79
+  temporal_features: 3
+  text_embedding_dimension: 128
+reporting:
+  post_hoc_llm_verifier: false
+  terminal_actions:
+    - deterministic_evidence_linked_report
+    - abstain
+data_status:
+  stance_labels: ai_assisted_single_reviewer_silver
+  human_gold_standard: false
+

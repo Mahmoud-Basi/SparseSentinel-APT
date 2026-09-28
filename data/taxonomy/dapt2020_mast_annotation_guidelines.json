@@ -1,0 +1,45 @@
+{
+  "task": "Determine the evidential stance of the complete window toward the specified cybersecurity aspect. Threat stance is not emotion.",
+  "labels": {
+    "SUPPORTING": "The observed evidence materially supports that the target aspect is present in this window.",
+    "CONTRADICTING": "The observed evidence materially supports a benign or alternative interpretation that conflicts with the target aspect. Mere absence of attack evidence is not contradiction.",
+    "NEUTRAL": "The evidence is unrelated, non-decisive, or compatible with both the target aspect and an alternative interpretation."
+  },
+  "insufficient_context": "Mark true when the available window does not permit a defensible stance. This flag is separate from the three semantic labels.",
+  "decisive_evidence_ids": "List only evidence identifiers that directly justify the selected stance, separated by semicolons. Do not create new identifiers.",
+  "rules": [
+    "Judge only the supplied evidence and aspect definition.",
+    "Do not infer an attack solely from unusual volume or timing.",
+    "Do not label a benign-only window as CONTRADICTING solely because the target aspect is absent.",
+    "Use NEUTRAL when evidence concerns a different attack aspect.",
+    "Set insufficient_context=true when a reliable decision requires evidence outside the supplied window.",
+    "Confidence must be an integer from 1 (very uncertain) to 5 (very certain)."
+  ],
+  "aspect_guide": {
+    "reconnaissance": {
+      "definition": "Evidence indicating discovery, probing, enumeration, or information gathering that can prepare a later intrusion.",
+      "include": "Scanning, service discovery, host discovery, systematic probing, or repeated exploratory communication.",
+      "exclude": "Routine isolated service contact without an exploratory pattern."
+    },
+    "initial_access_foothold": {
+      "definition": "Evidence indicating an attempt to obtain or maintain an initial presence in the target environment.",
+      "include": "Exploit-like access behavior, suspicious authentication or login activity, and communication consistent with foothold creation.",
+      "exclude": "Ordinary authorized access or unrelated discovery behavior."
+    },
+    "lateral_movement": {
+      "definition": "Evidence indicating movement, access, or propagation from one internal system or trust boundary to another.",
+      "include": "Abnormal internal-to-internal access, remote-service use, or multi-endpoint propagation consistent with campaign progression.",
+      "exclude": "Expected internal service communication without movement evidence."
+    },
+    "data_exfiltration": {
+      "definition": "Evidence indicating unauthorized transfer, staging, or removal of data from the monitored environment.",
+      "include": "Outbound transfer behavior, unusual volume or asymmetry, or a campaign-consistent channel for removing data.",
+      "exclude": "Routine outbound communication without evidence of data removal."
+    }
+  },
+  "allowed_stance_labels": [
+    "SUPPORTING",
+    "CONTRADICTING",
+    "NEUTRAL"
+  ]
+}

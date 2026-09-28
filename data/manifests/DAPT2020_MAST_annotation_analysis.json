@@ -1,0 +1,136 @@
+{
+  "rows": {
+    "A": 240,
+    "B": 240,
+    "matched": 240,
+    "duplicateA": 0,
+    "duplicateB": 0,
+    "onlyA": 0,
+    "onlyB": 0
+  },
+  "missing": {
+    "A": {
+      "Annotation ID": 0,
+      "Aspect": 0,
+      "Stance": 0,
+      "Insufficient context": 0,
+      "Confidence (1–5)": 0,
+      "Notes": 0
+    },
+    "B": {
+      "Annotation ID": 0,
+      "Aspect": 0,
+      "Stance": 0,
+      "Insufficient context": 0,
+      "Confidence (1–5)": 0,
+      "Notes": 0
+    }
+  },
+  "invalid": {
+    "A": {
+      "stance": 0,
+      "context": 0,
+      "confidence": 0
+    },
+    "B": {
+      "stance": 0,
+      "context": 0,
+      "confidence": 0
+    }
+  },
+  "distributions": {
+    "A": {
+      "stance": {
+        "NEUTRAL": 108,
+        "CONTRADICTING": 36,
+        "SUPPORTING": 96
+      },
+      "context": {
+        "FALSE": 208,
+        "TRUE": 32
+      },
+      "confidence": {
+        "2": 32,
+        "3": 146,
+        "4": 62
+      }
+    },
+    "B": {
+      "stance": {
+        "NEUTRAL": 135,
+        "CONTRADICTING": 36,
+        "SUPPORTING": 69
+      },
+      "context": {
+        "FALSE": 154,
+        "TRUE": 86
+      },
+      "confidence": {
+        "2": 82,
+        "3": 96,
+        "4": 62
+      }
+    }
+  },
+  "agreement": {
+    "stance": {
+      "n": 240,
+      "agreement": 0.8875,
+      "expected": 0.390625,
+      "kappa": 0.8153846153846153
+    },
+    "context": {
+      "n": 240,
+      "agreement": 0.775,
+      "expected": 0.6038888888888889,
+      "kappa": 0.4319775596072931
+    },
+    "confidence": {
+      "n": 240,
+      "weighted_kappa": 0.7942386831275721,
+      "mean_abs_diff": 0.20833333333333334
+    },
+    "any_disagreement": 81,
+    "stance_disagreement": 27,
+    "context_disagreement": 54,
+    "exact_all_fields": 159
+  },
+  "aspect": {
+    "data_exfiltration": {
+      "stance": {
+        "n": 50,
+        "agreement": 0.98,
+        "expected": 0.5336,
+        "kappa": 0.9571183533447684
+      },
+      "n": 50
+    },
+    "lateral_movement": {
+      "stance": {
+        "n": 60,
+        "agreement": 0.95,
+        "expected": 0.4013888888888889,
+        "kappa": 0.9164733178654292
+      },
+      "n": 60
+    },
+    "initial_access_foothold": {
+      "stance": {
+        "n": 59,
+        "agreement": 0.9322033898305084,
+        "expected": 0.9011778224648089,
+        "kappa": 0.3139534883720928
+      },
+      "n": 59
+    },
+    "reconnaissance": {
+      "stance": {
+        "n": 71,
+        "agreement": 0.7323943661971831,
+        "expected": 0.326720888712557,
+        "kappa": 0.6025338833235121
+      },
+      "n": 71
+    }
+  }
+}
