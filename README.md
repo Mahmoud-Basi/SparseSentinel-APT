@@ -1,6 +1,6 @@
 # SparseSentinel-APT
 
-Official research code and private data package for **Multimodal Aspect-Based Threat-Sentiment Analysis for APT Detection and Investigation**.
+Official research code and private data package for **Multimodal Aspect-Based Threat-Sentiment Analysis for APT Detection**.
 
 SparseSentinel-APT formulates APT investigation as multimodal aspect-based threat-sentiment analysis (MABTSA). It combines aspect-conditioned multimodal joint-embedding predictive learning (AM-JEPA), sparse supporting/contradicting evidence selection, uncertainty-aware abstention, and deterministic reports linked to immutable evidence identifiers.
 
