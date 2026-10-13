@@ -22,9 +22,14 @@ The pipeline does not use a post-hoc LLM verifier. Its terminal action is either
 | Core-three macro-F1, five seeds | 0.8381 ± 0.0157 |
 | Missing-network campaign F1 | 0.8143 ± 0.0226 |
 | Missing-text campaign F1 | 0.8343 ± 0.0202 |
-| Dense AM-JEPA stance macro-F1 | 0.5680 |
-| Text sparse model, full-coverage macro-F1 | 0.5670 ± 0.0398 |
-| Text sparse model, selective macro-F1 | 0.6246 at 69.2% coverage |
+| Dense AM-JEPA stance macro-F1, silver pilot | 0.5680 |
+| Text sparse stance macro-F1, silver pilot | 0.5670 ± 0.0398 |
+| Text sparse selective macro-F1, silver pilot | 0.6246 at 69.2% coverage |
+| GUIDE dense-attention stance macro-F1, 263,840 test units | 0.7906 ± 0.0047 |
+| GUIDE single-sparse stance macro-F1, K=4 | 0.7912 ± 0.0031 |
+| GUIDE dual-sparse stance macro-F1, K=4 | 0.7870 ± 0.0080 |
+| GUIDE dense-attention selective macro-F1 | 0.8469 at 81.7% test coverage |
+| GUIDE dense-attention macro-F1, unseen organizations | 0.7486 ± 0.0028 |
 
 ## Repository layout
 
